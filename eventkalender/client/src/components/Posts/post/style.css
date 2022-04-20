@@ -1,0 +1,43 @@
+.card-container{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3rem;
+}
+
+
+.img{
+    width: 20rem;
+    height: 12.5rem;
+  
+}
+
+
+.event-data{
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+padding-left: 2rem;
+padding-right: 2rem;
+}
+
+.postinfo{
+    width: 15rem;
+}
+
+.link-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-btn{
+    text-decoration: none;
+    color: #ffff;
+    background-color: #3BD1AD;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+    border-radius: 50px;
+    border: none;
+}
