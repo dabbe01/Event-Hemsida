@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Avatar } from '@material-ui/core';
 import { useDispatch } from 'react-redux';
 import decode from 'jwt-decode';
 import './navbar.css'
@@ -40,12 +41,14 @@ const Navbar = () => {
         {user?.result ? (
           
           <div className='navbar-login-container'>
-            {/* <div className='navbar-login-logo'>
-            <img className='logo' src={logo} alt="" />
-            </div> */}
+            <div className='navbar-login-logo'>
+           <Link to="/"> <img className='logo' src={logo} alt="" /></Link>
+            </div>
             <Link to="/form" type="button" className='a'>Skapa Event</Link> 
             <Link to="Om_oss" type="button" className='b'>Om oss</Link> 
-            <img src={user.result.imageUrl} alt={user?.result.imageUrl} className="navbar-profile-logo"/>
+           <Avatar alt={user?.result.name} src={user?.result.imageUrl}>{user?.result.name.charAt(0)}</Avatar>
+           
+         
             <h2 className='navbar-name'>{user?.result.name}</h2>
             <button className='navbar-logut-btn'variant="contained"  color="secondary" onClick={logout}>Logout</button>
           </div>

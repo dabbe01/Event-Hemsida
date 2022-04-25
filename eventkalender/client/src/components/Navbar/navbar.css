@@ -23,27 +23,15 @@
     padding-right: 0.9rem;
     border-radius: 0.4rem;
     border: none;
+    cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.avatar-bg-color{
+    background-color: blue;
+    color: #ffff;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%
+}
 
 /*När man är inte inloggad*/
 .navbar_container{
@@ -88,4 +76,7 @@
     padding-left:  0.9rem;
     padding-right:  0.9rem;
     border-radius: 0.4rem;
+}
+.c:hover{
+    background-color: rgb(55, 192, 160)
 }

@@ -7,6 +7,10 @@ const postSchema = mongoose.Schema({
     skaparen: String,
     link: String,
     selectedFile: String,
+    date_start: Date,
+    date_end: Date,
+    city: String,
+    adress: String,
     createdAt: {
         type: Date,
         default: new Date()
