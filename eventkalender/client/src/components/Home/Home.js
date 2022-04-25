@@ -20,6 +20,13 @@ const Home = () => {
     <div>
     <Navbar />
     <Main/>
+    <div className='hej'>
+      <label htmlFor="">Stad</label>
+      <input type="" />
+      <label htmlFor="">namn</label>
+      <input type="" />
+     
+    </div>
     <Posts setCurrentId={setCurrentId}/>
     <Info_main/>
   
