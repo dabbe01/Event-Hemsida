@@ -45,7 +45,7 @@ const Navbar = () => {
            <Link to="/"> <img className='logo' src={logo} alt="" /></Link>
             </div>
             <Link to="/form" type="button" className='a'>Skapa Event</Link> 
-            <Link to="Om_oss" type="button" className='b'>Om oss</Link> 
+            <Link to="/about" type="button" className='b'>Om oss</Link> 
            <Avatar alt={user?.result.name} src={user?.result.imageUrl}>{user?.result.name.charAt(0)}</Avatar>
            
          
@@ -59,8 +59,8 @@ const Navbar = () => {
               <div/>
             <div className='navbar_links'>
           <Link to="/form" type="button" className='a'>Skapa Event</Link> 
-          <Link to="Om_oss" type="button" className='b'>Om oss</Link> 
-          <Link to="auth" type="button" className='c'>Logga in</Link>    
+          <Link to="/about" type="button" className='b'>Om oss</Link> 
+          <Link to="/auth" type="button" className='c'>Logga in</Link>    
           </div>
         </div>
           )}

@@ -5,6 +5,8 @@
 }
 
 
+
+
 .img{
     width: 20rem;
     height: 12.5rem;
@@ -18,6 +20,9 @@ flex-direction: column;
 justify-content: space-around;
 padding-left: 2rem;
 padding-right: 2rem;
+}
+.event-data p{
+  color: blue;
 }
 
 .postinfo{

@@ -7,8 +7,8 @@ const postSchema = mongoose.Schema({
     skaparen: String,
     link: String,
     selectedFile: String,
-    date_start: Date,
-    date_end: Date,
+    datestart: Date,
+    dateend: Date,
     city: String,
     adress: String,
     createdAt: {

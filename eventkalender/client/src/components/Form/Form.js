@@ -9,12 +9,11 @@ import NoSign from "./noSign/noSign";
 import './form.css'
 
 const Form = () => {
-    const [postData, setPostData] = useState({eventname: '', eventinfo: '', link: '', selectedFile: '',  date_start: '',  date_end: '', city: '', adress: ''})
+    const [postData, setPostData] = useState({eventname: '', eventinfo: '', link: '', selectedFile: '',  datestart: '',  dateend: '', city: '', adress: ''})
     const dispatch = useDispatch()
     const navigate = useNavigate();
     const user = JSON.parse(localStorage.getItem('profile'))
-    console.log(user)
-    
+
     const handleSubmit = (e) => {
         e.preventDefault()
         dispatch(createPost({...postData, name: user?.result?.name}))
@@ -50,8 +49,8 @@ const Form = () => {
                 />
                 </div>
             </div>
-            <div><label htmlFor="">Startar: </label><input className="date" type="date" name="" id="" required value={postData.date_start} onChange={(e) => setPostData({ ...postData, date_start: e.target.value})}/> <input type="time" /></div>
-            <div><label htmlFor="">Slutar: </label><input className="date" type="date" name="" id=""  required value={postData.date_end} onChange={(e) => setPostData({ ...postData, date_end: e.target.value})} /> <input type="time" /></div>
+            <div><label htmlFor="">Startar: </label><input className="date" type="date" name="" id="" required value={postData.datestart} onChange={(e) => setPostData({ ...postData, datestart: e.target.value})}/> <input type="time" /></div>
+            <div><label htmlFor="">Slutar: </label><input className="date" type="date" name="" id=""  required value={postData.dateend} onChange={(e) => setPostData({ ...postData, dateend: e.target.value})} /> <input type="time" /></div>
             
             <div>
             <select name="" id="" required value={postData.city} onChange={(e) => setPostData({ ...postData, city: e.target.value})}>

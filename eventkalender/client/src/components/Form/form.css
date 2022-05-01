@@ -33,7 +33,7 @@
   border-radius: 20px;
   border: none;
 }
-input[type=text], select, textarea {
+ select, textarea {
     width: 100%;
     padding: 12px;
     border: none;
