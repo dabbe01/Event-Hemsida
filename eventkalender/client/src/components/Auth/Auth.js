@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import { GoogleLogin } from 'react-google-login';
-import { Avatar, Button, Paper, Grid, Typography, Container } from '@material-ui/core';
 import { Link, useNavigate } from 'react-router-dom';
 import { AUTH } from '../../constants/actionTypes';
 import { useDispatch } from 'react-redux';
-import Input from './Input';
+
 import { signin, signup } from '../../actions/auth';
+
+import './Auth.css'
+import arrowBlue from '../../img/ArrowBlue.svg'
+import arrowGreen from '../../img/ArrowGreen.svg'
 
 const initialState = { firstName: '', lastName: '', email: '', password: ''};
 
@@ -16,15 +19,9 @@ const SignUp = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-
-
-  const [showPassword, setShowPassword] = useState(false);
-  const handleShowPassword = () => setShowPassword(!showPassword);
-
   const switchMode = () => {
     
-    setIsSignup((prevIsSignup) => !prevIsSignup);
-    setShowPassword(false);
+    setIsSignup((iSignup) => !iSignup);;
   };
 
   const handleSubmit = (e) => {
@@ -53,48 +50,51 @@ const SignUp = () => {
 
   const handleChange = (e) => setFormdata({ ...formData, [e.target.name]: e.target.value });
 
+
   return (
-    <Container component="main" maxWidth="xs">
-      <Link to="/">till</Link>
-      <Paper  elevation={3}>
-        <Avatar >
-        </Avatar>
-        <Typography component="h1" variant="h5">{ isSignup ? 'Sign up' : 'Sign in' }</Typography>
-        <form  onSubmit={handleSubmit}>
-          <Grid container spacing={2}>
-            { isSignup && (
+    <div className='login-container'>
+      <div className='tesee'>
+        <div className='arrow-container'>
+        { isSignup ?  <Link to='/'> <img src={arrowBlue} alt="" /></Link> :  <Link to='/'><img src={arrowGreen} alt="" /> </Link> }
+        
+        </div>
+        <div>{ isSignup ? <h1 className='h1-reg'>Registrera</h1> : <h1 className='h1-login'>Logga in</h1> }</div>
+        <form className='form-container' onSubmit={handleSubmit}>
+          <div className='login-input-container'>
+            { isSignup ? 
             <>
-              <Input name="firstName" label="First Name" handleChange={handleChange} autoFocus half />
-              <Input name="lastName" label="Last Name" handleChange={handleChange} half />
+              <input className='input-reg' name="firstName" placeholder="First Name" required onChange={handleChange}  />
+              <input className='input-reg' name="lastName" placeholder="Last Name" required onChange={handleChange} />
+              <input className='input-reg' name="email" placeholder="Email Address" required onChange={handleChange} type="email"/>
+              <input className='input-reg' name="password" placeholder="Password" required onChange={handleChange} type="password" />
             </>
-            )}
-            <Input name="email" label="Email Address" handleChange={handleChange} type="email" />
-            <Input name="password" label="Password" handleChange={handleChange} type={showPassword ? 'text' : 'password'} handleShowPassword={handleShowPassword} />
-          </Grid>
-          <Button type="submit" fullWidth variant="contained" color="primary" >
-            { isSignup ? 'Sign Up' : 'Sign In' }
-          </Button>
-          <GoogleLogin
+            :  
+            <>
+              <input className='input-login' name="email" placeholder="Email Address" required onChange={handleChange} type="email"/>
+              <input className='input-login' name="password" placeholder="Password" required onChange={handleChange} type="password" />
+              <div className='google-container'>
+              <GoogleLogin
             clientId="288917284057-ganqvnrtes8ucjn31ruhmq4c40umtu18.apps.googleusercontent.com"
             render={(renderProps) => (
-              <Button color="primary" fullWidth onClick={renderProps.onClick} disabled={renderProps.disabled}  variant="contained">
-                Google Sign In
-              </Button>
-            )}
-            onSuccess={googleSuccess}
-            onFailure={googleError}
-            cookiePolicy="single_host_origin"
-          />
-          <Grid container justifyContent="flex-end">
-            <Grid item>
-              <Button onClick={switchMode}>
-                { isSignup ? 'Already have an account? Sign in' : "Don't have an account? Sign Up" }
-              </Button>
-            </Grid>
-          </Grid>
+              <button className='google-btn' onClick={renderProps.onClick} disabled={renderProps.disabled}  >
+               <b>Google Sign In</b> 
+              </button>
+               )}
+                onSuccess={googleSuccess}
+                onFailure={googleError}
+                cookiePolicy="single_host_origin"
+                 />
+          </div>
+            </>
+            }
+          </div>    
+            <div className='submit-switchModed-btn'>
+               { isSignup ?   <button type="submit" className='btn-reg' > <b>Registrera</b>  </button> : <button type="submit" className='btn-login'> <b>Logga in</b>  </button> }
+               { isSignup ?  <button onClick={switchMode} className='btn-no-account'> <b>Don't have an account? Sign Up</b> </button> :  <button onClick={switchMode} className='btn-have-account'> <b>Already have an account? Sign in</b></button>}
+            </div>
         </form>
-      </Paper>
-    </Container>
+        </div>
+    </div>
   );
 };
 

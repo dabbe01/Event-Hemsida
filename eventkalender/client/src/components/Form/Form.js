@@ -5,8 +5,10 @@ import { useDispatch } from 'react-redux'
 import {createPost} from '../../actions/posts'
 import Navbar from "../Navbar/Navbar";
 import NoSign from "./noSign/noSign";
+import wave from '../../img/wave.svg'
 
 import './form.css'
+import { TextField } from "@material-ui/core";
 
 const Form = () => {
     const [postData, setPostData] = useState({eventname: '', eventinfo: '', link: '', selectedFile: '',  datestart: '',  dateend: '', city: '', adress: ''})
@@ -30,31 +32,27 @@ const Form = () => {
     return (
         <div>
            <Navbar/>
-          
+              
+
+              <div className="container">
             <form  className="from-container" onSubmit={handleSubmit}>
-            <div className="form-input">
             <div className="h1-form">
-            <h1>Skapa Event</h1>
+                <h1>Lorem ipsum dolor</h1>
+            </div>
+            <div className="p-form">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab dignissimos earum corrupti culpa. Explicabo deserunt itaque ad, animi quo dignissimos minus dolorem. Earum esse voluptatum perspiciatis quam dolorem? Ad, asperiores.</p>
+            </div>
+            <div className="form-input">
+            <div className="h2-form">
+            <h2>Skapa Event</h2>
             </div>
           <div> <input name="EventName" className="eventNameInput" required value={postData.eventname} placeholder="Event namn" onChange={(e) => setPostData({ ...postData, eventname: e.target.value})}/> </div>
-          <div> <textarea name="EventInfo"  required value={postData.eventinfo} placeholder="Event info" onChange={(e) => setPostData({ ...postData, eventinfo: e.target.value})}/> </div>
-          <div>   <input name="link" className="eventLinkInput" required value={postData.link} placeholder="Extern länk" onChange={(e) => setPostData({ ...postData, link: e.target.value})}/> </div>
-            <div>
-            <label for="fileUpload" >Lägg upp en bakgrundsbild </label>
-              <div className="btn">
-                <FileBase 
-                    type="file"
-                    multiple={false}
-                    onDone={({base64}) => setPostData({ ...postData, selectedFile: base64})}
-                />
-                </div>
-            </div>
-            <div><label htmlFor="">Startar: </label><input className="date" type="date" name="" id="" required value={postData.datestart} onChange={(e) => setPostData({ ...postData, datestart: e.target.value})}/> <input type="time" /></div>
-            <div><label htmlFor="">Slutar: </label><input className="date" type="date" name="" id=""  required value={postData.dateend} onChange={(e) => setPostData({ ...postData, dateend: e.target.value})} /> <input type="time" /></div>
-            
-            <div>
-            <select name="" id="" required value={postData.city} onChange={(e) => setPostData({ ...postData, city: e.target.value})}>
-            <option value="Alingsås">Alingsås</option>
+          <div> <textarea name="EventInfo" className="eventInfoInput" required value={postData.eventinfo} placeholder="Event info" onChange={(e) => setPostData({ ...postData, eventinfo: e.target.value})}/> </div>
+          <div>   <input name="Link" className="eventLinkInput" required value={postData.link} placeholder="Extern länk" onChange={(e) => setPostData({ ...postData, link: e.target.value})}/> </div>
+          <div>   <input name="Adres" className="eventAdressInput" value={postData.adress} placeholder="Adress" onChange={(e) => setPostData({ ...postData, adress: e.target.value})}/> </div>
+          <div className="select-container">
+            <select name="" id=""  value={postData.city} onChange={(e) => setPostData({ ...postData, city: e.target.value})}>
+            <option value="" disabled selected>Stad</option>
 <option value="Arboga">Arboga</option>
   <option value="Arvika">Arvika</option>
   <option value="Askersund">Askersund</option>
@@ -189,12 +187,28 @@ const Form = () => {
 <option value="Östhammar">Östhammar</option>
             </select>
             </div>
-            <div>   <input name="link" required value={postData.adress} placeholder="Adress" onChange={(e) => setPostData({ ...postData, adress: e.target.value})}/> </div>
+            <div>
+            <label for="fileUpload" >Lägg upp en bakgrundsbild </label>
+              <div className="file-container">
+                <FileBase 
+                    type="file"
+                    multiple={false}
+                    onDone={({base64}) => setPostData({ ...postData, selectedFile: base64})}
+                />
+                </div>
+            </div>
+            <div className="date-container">
+            <div><label htmlFor="">Startar: </label><input className="date" type="date" name="" id="" required value={postData.datestart} onChange={(e) => setPostData({ ...postData, datestart: e.target.value})}/> <input type="time" /></div>
+            <div><label htmlFor="">Slutar: </label><input className="date" type="date" name="" id=""  required value={postData.dateend} onChange={(e) => setPostData({ ...postData, dateend: e.target.value})} /> <input type="time" /></div>
+            </div>
+            
             <div>
             <div> <input type="submit" value="Submit"/> </div>
             </div>
             </div>
+            {/* <img src={wave} alt="wave" className="wave-logo"/> */}
             </form>
+            </div>
             </div>
            
            

@@ -9,6 +9,8 @@ import Navbar from '../Navbar/Navbar';
 import Main from '../main/main';
 import Infomain from '../info-main/info_main';
 import Pagination from '../Pagination';
+
+import searchIcon from '../../img/search-icon.svg'
 import './home.css'
 
 function useQuery() {
@@ -50,15 +52,19 @@ const Home = () => {
     <div>
     <Navbar/>
     <Main/>
-    <div className='hej'>
+    
+    <div className='search-container'>
+    <div className='search-container-btn'>
       <input 
-        name='search' 
-        placeholder='Sök' 
+        name='search'
+        className='search-input' 
+        placeholder='Sök ett event!' 
         onKeyDown={handleKeyPress} 
         value={search} 
         onChange={(e) => setSearch(e.target.value)}
        /> 
-      <button onClick={searchPost}>Sök</button>    
+     <button className='sreach-btn' onClick={searchPost}><img src={searchIcon} className='searchIcon'/></button>   
+    </div>
     </div>
     <Posts setCurrentId={setCurrentId}/>
     {(!searchQuery) && (

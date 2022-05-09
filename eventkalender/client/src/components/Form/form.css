@@ -1,44 +1,105 @@
+
+ .container{
+   padding: 2rem;
+ }
 .from-container{
    display: grid;
-   height: 90vh;
-   grid-template-columns: repeat(5, 20%);
+   height: 83vh;
+   grid-template-columns: repeat(10, 10%);
    grid-template-rows: repeat(10, 10%);
+   background: linear-gradient(to right, #3BD1AD, #3EB3C2);
+   border-radius: 5rem 5rem 5rem 5rem;
 }
 .h1-form{
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  display: flex;
+  justify-content: center;
+  padding-top: 12px;
+  color: #fff;
+  font-size: 27px;
+}
+.p-form{
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  font-size: 22px;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+ 
+}
+.h2-form{
     grid-column-start: 3;
     grid-column-end: 3;
     grid-row-start: 0 ;
     grid-row-end: 1;
+    font-size: 27px;
 }
 .form-input{
-    background: linear-gradient(to right, #3BD1AD, #3EB3C2);
+    background-color: rgb(243, 243, 243);
     display: flex;
     justify-content:space-around;
     flex-direction: column;
     align-items: center;
-    grid-column-start: 2;
-    grid-column-end: 5;
+    grid-column-start: 6;
+    grid-column-end: 10;
     grid-row-start: 2 ;
-    grid-row-end: 9;
+    grid-row-end: 10;
+    border-radius:10px;
+    box-shadow: 0px 0px 20px gray;
+    z-index: 2;
 }
 .eventNameInput{
   width: 30vw;
   padding: 7px;
-  border-radius: 20px;
   border: none;
+  border-bottom: 2px solid black;
 }
 .eventLinkInput{
   width: 30vw;
   padding: 7px;
-  border-radius: 20px;
   border: none;
+  border-bottom: 2px solid black;
 }
- select, textarea {
+.eventInfoInput{
+  width: 30vw;
+  padding: 7px;
+  border: none;
+  border-bottom: 2px solid black;
+  height: 10rem;
+}
+.eventAdressInput{
+  width: 30vw;
+  padding: 7px;
+  border: none;
+  border-bottom: 2px solid black;
+}
+.eventNameInput:focus{
+ outline: none;
+}
+.eventLinkInput:focus{
+  outline: none;
+}
+.eventInfoInput:focus{
+  outline: none;
+}
+.eventAdressInput:focus{
+  outline: none;
+}
+ select {
     width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 20px;
+    padding: 10px;
+    border-radius: 10px;
     resize: none;
+  }
+
+  select {
+   outline: none;
+   width: 33%;
   }
   input[type=submit] {
     background-color: #04AA6D;
@@ -52,14 +113,20 @@
   
   input[type=submit]:hover {
     background-color: #45a049;
-  }
+  } 
 
-.custom-file-input{
-  width: 20px;
+.file-container{
+  width: 30vw;
 }
-.date{
-  padding: 2px;
-  border-radius: 20px;
-  border: none;
-  
+
+.date-container{
+  display: flex;
+  width: 30vw;
+  justify-content: space-between;
 }
+
+.select-container{
+  width: 30vw;
+  display: flex;
+}
+

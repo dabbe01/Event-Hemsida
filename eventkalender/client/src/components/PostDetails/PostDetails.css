@@ -1,0 +1,9 @@
+.postDetails-container{
+    height: 60vh;
+  
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: darkcyan;
+}

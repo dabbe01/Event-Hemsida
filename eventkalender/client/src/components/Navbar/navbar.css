@@ -1,4 +1,4 @@
-.navbar-login-container{
+/* .navbar-login-container{
   display: flex;  
   justify-content: flex-end;
   align-items: center;
@@ -10,9 +10,7 @@
     height: 3rem;
     border-radius: 50%
 }
-.navbar-name{
-    padding: 2rem;
-}
+
 .navbar-logut-btn{
     text-decoration: none;
     color: #ffff;
@@ -33,7 +31,14 @@
     border-radius: 50%
 }
 
+.navbar-login-logo{
+    display: flex;
+    align-items: center;
+    margin-left: 10rem;
+} */
+
 /*När man är inte inloggad*/
+
 .navbar_container{
     display: flex;
     flex-direction: column;
@@ -45,6 +50,9 @@
     width: 100%;
     height: 5rem;
 }
+.navbar-name{
+    padding: 2rem;
+}
 .navbar-logo{
     display: flex;
     align-items: center;
@@ -54,19 +62,19 @@
     height: 2rem;
     width: 2rem;
 }
-.a{
+.createEvent-btn{
     margin-right: 5rem;
     text-decoration: none;
     color: #8A8888;
     font-size: 20px;
 }
-.b{
+.about-btn{
     margin-right: 5rem;  
     text-decoration: none;
     color: #8A8888;
     font-size: 20px;
 }
-.c{
+.login-btn{
     margin-right: 20rem;  
     text-decoration: none;
     color: #ffff;
@@ -76,7 +84,25 @@
     padding-left:  0.9rem;
     padding-right:  0.9rem;
     border-radius: 0.4rem;
+    border: none;
+    cursor: pointer;
 }
-.c:hover{
+.logout-btn{
+    margin-right: 20rem;  
+    text-decoration: none;
+    color: #ffff;
+    background-color: #3BD1AD;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    padding-left:  1.4rem;
+    padding-right:  1.4rem;
+    border-radius: 0.4rem;
+    border: none;
+    cursor: pointer;
+}
+.login-btn:hover{
+    background-color: rgb(55, 192, 160)
+}
+.logout-btn:hover{
     background-color: rgb(55, 192, 160)
 }

@@ -3,7 +3,6 @@
     grid-template-columns: repeat(10, 10%);
     grid-template-rows: repeat(10, 10%);
     flex-direction: column;
-   
     background: linear-gradient(to right, #3BD1AD, #3EB3C2);
     border-top-left-radius: 5rem;
     border-top-right-radius: 5rem;

@@ -2,18 +2,52 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-
-
-.hej{
-    display: flex;
-    align-items: center;
-    justify-content: center;
    
 }
 
-.pagination{
+.search-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 3rem;   
+    
+}
+
+.search-container-btn{  
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgb(149, 149, 149);
+    
+    
+}
+
+.pagination {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
+
+.search-input{
+    padding: 12px;   
+    border-radius: 20px;
+    width: 20rem;
+    border: none;
+}
+.search-input:focus{
+    outline: none;
+}
+
+.sreach-btn{
+    border: none;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+.searchIcon{
+    width: 2rem;
+    height:2rem;
+}
+

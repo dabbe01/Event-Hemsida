@@ -1,0 +1,118 @@
+.form-container{
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 62.9rem;
+    background: linear-gradient(to right, #3BD1AD, #3EB3C2);
+    opacity: 1;
+}
+
+.login-input-container{
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+}
+.input-reg{
+  width: 18rem;
+  border-radius: 20px;
+  margin: 0.2rem;
+  padding: 0.7rem;
+  border: solid 2px #3EB2C2;
+}
+.input-reg:focus{
+    outline: #3EB2C2;
+  }
+.input-login{
+    width: 18rem;
+    border-radius: 20px;
+    margin: 0.2rem;
+    padding: 0.7rem;
+    border: solid 2px #3BD1AD;
+  }
+  .input-login:focus{
+    outline: #3BD1AD;
+  }
+
+.tesee{
+   border-radius: 20px;
+    box-shadow: 0px 0px 30px gray;
+    margin: 4rem;
+    width: 40rem;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    background-color: rgb(244, 244, 244);
+}
+
+.input{
+    background-color: aliceblue;
+}
+
+.h1-reg{
+    font-size: 40px;
+    color: #3EB2C2;
+}
+
+.h1-login{
+    font-size: 40px;
+    color: #3BD1AD;
+}
+.google-container{
+    width: 100%;
+    margin: 0.2rem;
+}
+.google-btn{
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    background-color: #3BD1AD;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.arrow-container{
+    position: relative;
+    bottom: 2%;
+    right: 45%;
+    width: 2.5rem;
+}
+.submit-switchModed-btn{
+    padding-top: 3rem;
+    width: 18rem;
+}
+.submit-switchModed-btn > button  {
+   padding: 0.7rem;
+   margin-top: 1rem;
+   width: 100%;
+   border-radius: 20px;
+   border: none;
+   color: rgb(255, 255, 255);
+   font-size: 16px;
+   cursor: pointer;
+}
+
+.btn-reg {
+    background-color: #3EB2C2;
+}
+.btn-login{
+    background-color: #3BD1AD;
+}
+.btn-no-account{
+    background-color: #3EB2C2;
+}
+.btn-have-account{
+    background-color: #3BD1AD;
+}
