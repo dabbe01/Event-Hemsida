@@ -25,7 +25,7 @@ const Post = ({post}) =>{
         <div className="card-container"> 
         
          <div className="event-img">
-        <img src={!useImage ? noImage : useImage} alt="" className="img"/>
+        <img src={!useImage ? noImage : useImage} alt="" className="postImg"/>
         </div>
         <div className="event-data">
             <h1 className="eventname"> {post.eventname}</h1>

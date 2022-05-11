@@ -31,11 +31,11 @@ const PostDetails = () => {
     <div>
       <Navbar/>
     <div className='postDetails-container'>
-      <div>
-       
-        <img src={!useImage ? noImage : useImage} alt="" className="img"/>
-    
-   
+      <div className='postDetails-container-div'>
+       <div className='postDetailsImg-container'>
+        <img src={!useImage ? noImage : useImage} alt="" className="postDetailsImg"/>
+      </div>
+            <div className='infoo'>
             <h1 className="eventname"> {post.eventname}</h1>
             <p className="postinfo">{post.eventinfo}</p>
             <p className="postinfo">{moment(post.datestart).format("L")}</p>
@@ -44,6 +44,7 @@ const PostDetails = () => {
             <p>{post.adress}</p>
           <div><p>{moment(post.createdAt).fromNow()}</p> 
           <h4>{post.name}</h4>
+          </div>
           </div>
         
       </div>
