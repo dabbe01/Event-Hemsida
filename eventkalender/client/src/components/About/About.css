@@ -1,0 +1,33 @@
+.about-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 30rem;
+    background: linear-gradient(to right, #3BD1AD, #3EB3C2);
+    border-radius: 5rem;
+    height: 83vh;
+    padding: 3rem;
+    
+}
+
+.about-container > div {
+    text-align: center;
+    width: 50%;
+    color: white;
+    padding: 3rem;
+}
+.about-container > div > h1{
+    font-size: 50px;
+}
+
+.about-container > div > p{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.testarar{
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+

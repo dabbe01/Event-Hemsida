@@ -68,19 +68,17 @@
     font-size: 40px;
     color: #3BD1AD;
 }
-.google-container{
-    width: 100%;
-    margin: 0.2rem;
-}
+
 .google-btn{
-    cursor: pointer;
-    font-size: 16px;
-    width: 100%;
-    background-color: #3BD1AD;
     padding: 0.7rem;
-    border: none;
+    margin-top: 1rem;
+    width: 100%;
     border-radius: 20px;
+    border: none;
     color: rgb(255, 255, 255);
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #3BD1AD;
 }
 
 .arrow-container{
@@ -90,7 +88,6 @@
     width: 2.5rem;
 }
 .submit-switchModed-btn{
-    padding-top: 3rem;
     width: 18rem;
 }
 .submit-switchModed-btn > button  {
@@ -103,6 +100,9 @@
    font-size: 16px;
    cursor: pointer;
 }
+.submit-switchModed-btn > button:hover  {
+   opacity: 0.6;
+ }
 
 .btn-reg {
     background-color: #3EB2C2;

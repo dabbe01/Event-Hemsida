@@ -19,7 +19,6 @@ const main = () => {
       <div className='wave'>
         <img src={wave} className='logo-wave' alt="wave"/>
       </div>
-      {/* <div class="bullet"></div>  */}
     
     </div>
   )

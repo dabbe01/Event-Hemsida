@@ -8,7 +8,7 @@
    grid-template-columns: repeat(10, 10%);
    grid-template-rows: repeat(10, 10%);
    background: linear-gradient(to right, #3BD1AD, #3EB3C2);
-   border-radius: 5rem 5rem 5rem 5rem;
+   border-radius: 5rem;
 }
 .h1-form{
   grid-column-start: 2;

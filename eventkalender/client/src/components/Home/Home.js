@@ -7,8 +7,8 @@ import {  getPostsBySearch } from '../../actions/posts'
 import Posts from "../Posts/Posts";
 import Navbar from '../Navbar/Navbar';
 import Main from '../main/main';
-import Infomain from '../info-main/info_main';
 import Pagination from '../Pagination';
+import Footer from '../Footer/Footer'
 
 import searchIcon from '../../img/search-icon.svg'
 import './home.css'
@@ -73,9 +73,8 @@ const Home = () => {
   
     </div> 
       )}
-    <Infomain/>
   
-
+      <Footer/>
 
 
 </div>

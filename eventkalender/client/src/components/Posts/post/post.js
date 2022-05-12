@@ -17,6 +17,13 @@ const Post = ({post}) =>{
     const useImage = post.selectedFile
     const openPost = () => navigate(`/posts/${post._id}`)
     
+  const checkTextLength = () =>{
+    if(post.eventinfo.length > 300){
+      return post.eventinfo.substring(0, 300) + '...'
+    } else {
+      return post.eventinfo
+    }
+  }
 
     return(
         <> 
@@ -29,7 +36,7 @@ const Post = ({post}) =>{
         </div>
         <div className="event-data">
             <h1 className="eventname"> {post.eventname}</h1>
-            <p className="eventInfo">{post.eventinfo.substring(0, 300) + '...'} </p>
+            <p className="eventInfo">{checkTextLength(post.eventinfo)} </p>
             <div className="postInfo-container">
              
             <p className="postinfo"> <b>Startar:</b> {moment(post.datestart).format("L")}</p>

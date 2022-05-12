@@ -48,7 +48,7 @@ const Form = () => {
             </div>
           <div> <input name="EventName" className="eventNameInput" required value={postData.eventname} placeholder="Event namn" onChange={(e) => setPostData({ ...postData, eventname: e.target.value})}/> </div>
           <div> <textarea name="EventInfo" className="eventInfoInput" required value={postData.eventinfo} placeholder="Event info" onChange={(e) => setPostData({ ...postData, eventinfo: e.target.value})}/> </div>
-          <div>   <input name="Link" className="eventLinkInput" required value={postData.link} placeholder="Extern länk" onChange={(e) => setPostData({ ...postData, link: e.target.value})}/> </div>
+          <div>   <input name="Link" className="eventLinkInput" required value={postData.link} placeholder="Extern länk T.ex https://www.google.com" onChange={(e) => setPostData({ ...postData, link: e.target.value})}/> </div>
           <div>   <input name="Adres" className="eventAdressInput" value={postData.adress} placeholder="Adress" onChange={(e) => setPostData({ ...postData, adress: e.target.value})}/> </div>
           <div className="select-container">
             <select name="" id=""  value={postData.city} onChange={(e) => setPostData({ ...postData, city: e.target.value})}>

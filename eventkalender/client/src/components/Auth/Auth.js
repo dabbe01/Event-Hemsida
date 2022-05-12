@@ -3,6 +3,7 @@ import { GoogleLogin } from 'react-google-login';
 import { Link, useNavigate } from 'react-router-dom';
 import { AUTH } from '../../constants/actionTypes';
 import { useDispatch } from 'react-redux';
+import NoSign from '../Form/noSign/noSign';
 
 import { signin, signup } from '../../actions/auth';
 
@@ -32,6 +33,8 @@ const SignUp = () => {
       dispatch(signin(formData, navigate));
     }
   };
+
+
 
   const googleSuccess = async (res) => {
     const result = res?.profileObj;
@@ -70,26 +73,26 @@ const SignUp = () => {
             </>
             :  
             <>
-              <input className='input-login' name="email" placeholder="Email Address" required onChange={handleChange} type="email"/>
-              <input className='input-login' name="password" placeholder="Password" required onChange={handleChange} type="password" />
-              <div className='google-container'>
+              <input className='input-login' name="email" placeholder="Email Address" onChange={handleChange} type="email"/>
+              <input className='input-login' name="password" placeholder="Password" onChange={handleChange} type="password" />
+            </>
+            }
+          </div>    
+            <div className='submit-switchModed-btn'>
+               { isSignup ?   <button type="submit" className='btn-reg' > <b>Registrera</b>  </button> : <button type="submit" className='btn-login'> <b>Logga in</b>  </button> }
+               { isSignup ? <p></p> : 
               <GoogleLogin
             clientId="288917284057-ganqvnrtes8ucjn31ruhmq4c40umtu18.apps.googleusercontent.com"
             render={(renderProps) => (
               <button className='google-btn' onClick={renderProps.onClick} disabled={renderProps.disabled}  >
-               <b>Google Sign In</b> 
+               <b>Google Log In</b> 
               </button>
                )}
                 onSuccess={googleSuccess}
                 onFailure={googleError}
                 cookiePolicy="single_host_origin"
                  />
-          </div>
-            </>
             }
-          </div>    
-            <div className='submit-switchModed-btn'>
-               { isSignup ?   <button type="submit" className='btn-reg' > <b>Registrera</b>  </button> : <button type="submit" className='btn-login'> <b>Logga in</b>  </button> }
                { isSignup ?  <button onClick={switchMode} className='btn-no-account'> <b>Don't have an account? Sign Up</b> </button> :  <button onClick={switchMode} className='btn-have-account'> <b>Already have an account? Sign in</b></button>}
             </div>
         </form>
